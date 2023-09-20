@@ -1,0 +1,40 @@
+.docknotesFrame{
+    max-width: 150px;
+    min-height: 100vh;
+    padding: 1rem;
+    border-right: 1px solid black;
+    >p{
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 3rem 0;
+    }
+}
+
+.addNoteButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    > button{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+    }
+    button:nth-child(1){
+        background-color: #55a0f6;
+    }
+    button:nth-child(2){
+        background-color: #e39d3c;
+    }
+    button:nth-child(3){
+        background-color: #db663a;
+    }
+    button:nth-child(4){
+        background-color: #cad952;
+    }
+    button:nth-child(5){
+        background-color: #9469ec;
+    }
+}
