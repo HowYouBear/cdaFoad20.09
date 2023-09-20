@@ -1,6 +1,11 @@
-.docknotesFrame{
-    max-width: 150px;
+.bodyMainFrame{
     min-height: 100vh;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+.docknotesFrame{
+    width: 150px;
     padding: 1rem;
     border-right: 1px solid black;
     >p{
@@ -37,4 +42,25 @@
     button:nth-child(5){
         background-color: #9469ec;
     }
+}
+
+.bodyFrame{
+    > h1, > .notesFrame{
+        margin: 1rem 4rem;
+    }
+}
+
+.notesFrame{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.note{
+    width: 15rem;
+    height: 15rem;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0.5rem;
 }

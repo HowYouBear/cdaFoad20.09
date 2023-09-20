@@ -1,0 +1,23 @@
+.searchBarFrame{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #e0e1e5;
+    margin: 3rem 15rem;
+    border-radius: 15px;
+    > i{
+        font-size: 1.1rem;
+        margin: 0.3rem 1rem;
+    }
+    > input{
+        font-size: 1.2rem;
+        margin: 0.3rem;
+        border: none;
+        background-color: inherit;
+        min-width: 240px;
+        width: 80%;
+    }
+    input::placeholder{
+        color: black;
+    }
+}
