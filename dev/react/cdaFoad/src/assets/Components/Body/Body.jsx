@@ -5,22 +5,25 @@ import style from "./Body.module.scss"
 function Body () {
 
     const [notes, setNotes] = useState([]);
+    const [noteContent, setNoteContent] = useState([]);
 
     const newNote = (newColor) =>{
         const monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         const date = new Date();
-        console.log(new Date())
+
+        const note = "Nouvelle note #"
+
         const newNote = 
         <div 
             key={notes.length} 
             className={style.note}
             style={{ backgroundColor: newColor}}
         >
-            Nouvelle div #{notes.length + 1}
+            <p>{note}{notes.length + 1}</p>
             <br/>
             <span
                 className={style.noteDateLastUpdate}>
-                {monthName[date.getMonth()]} {date.getDate()}, {date.getFullYear()}: {date.getHours()}:{date.getMinutes()}
+                {monthName[date.getMonth()]} {date.getDate()}, {date.getFullYear()}: {(date.getHours()<10?'0':'') + date.getHours()}:{(date.getMinutes()<10?'0':'') + date.getMinutes()}
             </span>
             <button 
                 className={style.editButton}
@@ -31,7 +34,10 @@ function Body () {
         </div>;
         
         setNotes([...notes, newNote]);
+        setNoteContent([...noteContent, note])
+
         console.log(notes);
+        console.log(noteContent);
     }
 
     const editNote = () =>{
